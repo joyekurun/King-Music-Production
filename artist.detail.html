@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> Artist  Details | King Music, Audio & Video streaming web application</title>
+  <meta name="description" content="Music, Musician, Bootstrap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+
+  <!-- carousel style and Js -->
+  <link rel="stylesheet" href="carousel/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="carousel/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="media/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="media/mep.css" type="text/css" />
+
+</head>
+<body>
+  <div class="app dk" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- aside -->
+  <div id="aside" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="left navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="index.html" class="navbar-brand md">
+         
+      
+          <img src="images/logo-transparent.png" alt="King Music prodcution" >
+          <span class="hidden-folded inline">King Music</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-active-primary">
+            
+            <ul class="nav" data-ui-nav>
+              <li class="nav-header hidden-folded">
+                <span class="text-xs text-subtitle2">Main Menu</span>
+              </li>
+
+
+
+
+               <li>
+                <a href="artist.html">
+                        <span class="nav-icon">
+                          <i class="material-icons">
+                             queue_music
+                          </i>
+                        </span>
+
+                  <span class="nav-text">Artist</span>
+                </a>
+              </li>
+
+
+
+
+
+                    <li>
+                      <a href="livestreaming.html">
+                        <span class="nav-icon">
+                          <i class="material-icons">
+                            live_tv
+                          </i>
+                        </span>
+
+                        <span class="nav-text">LiveStream</span>
+                      </a>
+                    </li>
+
+
+
+              <li>
+                <a href="masterclass.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                      queue_music
+                    </i>
+                  </span>
+                  <span class="nav-text">MasterClass</span>
+                </a>
+              </li>
+
+
+
+
+
+              <li>
+                <a href="shop.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                       add_shopping_cart
+                    </i>
+                  </span>
+                  <span class="nav-text">Shop</span>
+                </a>
+              </li>
+
+
+                       <li>
+                <a href="contact.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                       call
+                    </i>
+                  </span>
+                  <span class="nav-text">Contact Us</span>
+                </a>
+              </li>
+
+
+                             <li>
+                                <a href="donate.html">
+                                  <span class="nav-icon">
+                                    <i class="material-icons">
+                                     attach_money
+                                    </i>
+                                  </span>
+                                  <span class="nav-text">Donate</span>
+                                </a>
+                              </li>
+
+
+
+              <li>
+                <a data-toggle="modal" data-target="#search-modal">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                      search
+                    </i>
+                  </span>
+                  <span class="nav-text">Search</span>
+                </a>
+              </li>
+
+
+
+
+                                <li class="nav-header hidden-folded m-t">
+                                  <span class="text-xs text-subtitle2">Your Favourite collectionn</span>
+                                </li>
+
+
+                                    <li>
+                                      <a href="#">
+                                        <span class="nav-label">
+                                         
+                                        </span>
+
+                                        <span class="nav-icon">
+                                          <i class="material-icons"> 
+                                            list
+                                          </i>
+
+                                        </span>
+                                        <span class="nav-text">Tracks</span>
+
+                                      </a>
+                                    </li>
+
+
+
+
+                                <li>
+                                  <a href="#">
+                                    <span class="nav-icon">
+                                      <i class="material-icons">
+                                        play_circle_outline
+                                      </i>
+                                    </span>
+
+
+                                    <span class="nav-text">Playlists</span>
+                                  </a>
+                                </li>
+
+
+                                            <li>
+                                              <a href="#">
+
+                                                <span class="nav-icon">
+                                                  <i class="material-icons">
+                                                    favorite_border
+                                                  </i>
+                                                </span>
+
+                                                <span class="nav-text">Likes</span>
+                                              </a>
+                                            </li>
+                              </ul>
+                            </nav>
+                        </div>
+
+    </div>
+  </div>
+  <!-- / -->
+  
+
+
+  <!-- content -->
+  <div id="content" class="app-content white bg box-shadow-z2" role="main">
+
+    <div class="app-footer app-player grey bg">
+      <div class="playlist" style="width:100%"></div>
+    </div>
+    <div>
+
+
+
+<div>
+
+<div class="page-content">
+  <div class="padding">
+    <div class="row-col">
+        <div class="col-sm w w-auto-xs m-b">
+          <div class="item w r">
+            <div class="item-media">
+              <div class="item-media-content" style="background-image: url('images/single.jpg');"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm">
+          <div class="p-l-md no-padding-xs">
+            <div class="page-title">
+              <h1 class="inline">Look what you made me do</h1>
+            </div>
+            <p class="item-desc text-title-artist" data-ui-toggle-class="text-title-artist">Look What You Made Me Do lyrics © Sony/atv Tree Publishing, Sony/atv Songs Llc, Taylor Swift Music.</p>
+
+
+
+
+
+            <div class="item-action m-b">
+              <a class="btn btn-icon white rounded btn-share pull-right" data-toggle="modal" data-target="#share-modal"><i class="fa fa-share-alt"></i></a>
+
+              <button class="btn-playpause text-primary m-r-sm"></button> 
+
+
+
+              <span>2356</span>
+              <a class="btn btn-icon rounded btn-favorite"><i class="fa fa-heart-o"></i></a> 
+              <span>232</span>
+             
+            </div>
+
+
+
+            
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+
+  <div class="row-col">
+    <div class="col-lg-9 b-r no-border-md">
+      <div class="padding">
+
+          <h6 class="m-b">
+            <span class="text-subtitle2">by</span> 
+            <a href="artist.detail.html" data-pjax class="item-author _600">Taylor Swift</a> 
+            <span class="text-subtitle2 text-small">- 10 song, 50 min 32 sec</span>
+          </h6>
+
+
+
+
+          <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
+               
+
+
+                <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+
+<div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12">
+                  <div class="item">
+                  <div class="item-media ">
+                    <a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+
+
+                    <div class="item-overlay center">
+                      <button  class="btn-playpause">Play</button>
+                    </div>
+                  </div>
+
+
+                  <div class="item-info">
+                   
+
+                    <div>
+                      <a href="#">You all over me</a>
+                    </div>
+                    
+                    <div>
+                          <span class="item-meta-right">5:05</span>
+                        </div>
+            
+                  </div>
+                </div>
+              </div>
+
+
+
+
+          </div>
+
+
+          
+
+
+          
+        
+         
+
+      </div>
+    </div>
+
+
+
+
+     <div class="col-lg-3 w-xxl w-auto-md">
+      <div class="padding" style="bottom: 60px;" data-ui-jp="stick_in_parent">
+        <h6 class="text text-subtitle2">5 Likes</h6>
+        <div class="row item-list item-list-sm m-b">
+              
+
+
+
+               <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite1.jpg');"></a>
+
+                </div>
+
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">Simple Place To Be</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">RYD</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+              <div class="col-xs-12">
+                <div class="item">
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite3.jpg');"></a>
+                </div>
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">Reflection (Deluxe)</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Fifth Harmony</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+              <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite5.jpg');"></a>
+
+                </div>
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">What A Time To Be Alive</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Judith Garcia</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+              <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite10.jpg');"></a>
+                </div>
+
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">All I Need</a>
+                  </div>
+
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Pablo Nouvelle</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xs-12">
+                <div class="item">
+                <div class="item-media ">
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite7.jpg');"></a>
+
+                </div>
+                <div>
+                  <div>
+                    <a href="track.detail.html">I Wanna Be In the Cavalry 4</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Jeremy Scott</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+
+        <h6 class="text">Download mobile</h6>
+
+
+                      
+
+        <div class="btn-groups">
+              <a href="" class="btn btn-sm dark text-side" style="width: 135px">
+                <span class="pull-left ">
+                  <i class="fa fa-apple fa-2x"></i>
+                </span>
+
+                <span class="clear text-left ">
+                  <span class="text-subtitle2 ">Download on the</span>
+                  <b class="block m-b-xs">App Store</b>
+                </span>
+
+
+              </a>
+
+              <a href="" class="btn btn-sm dark" style="width: 133px">
+                <span class="pull-left">
+                  <i class="fa fa-play fa-2x"></i>
+                </span>
+
+
+                <span class="clear text-left ">
+                  <span class="text-subtitle2 ">Get it on</span>
+                  <b class="block m-b-xs text-side">Google Play</b>
+                </span>
+              </a>
+          </div>
+
+
+
+          <br>
+          <div class="nav text-small">
+            <a href="index.html" >Home | </a>
+            <a href="contact.html">Contact Us | </a>
+            <a href="#" >Legal | </a>
+            <a href="#" >Policy</a>
+          </div>
+          <p>&copy; Copyright King Music 2021</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>
+
+
+<!-- Layout end here-->
+  </div>
+
+
+<!--Script-->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="carousel/owl.carousel.min.js"></script>
+  <script src="media/mediaelement-and-player.min.js"></script>
+  <script src="media/mep.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/config.lazyload.js"></script>
+  <script src="js/ui-jp.js"></script>
+  <script src="js/ajax.js"></script>
+</body>
+</html>

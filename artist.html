@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> Artist | King Music, Audio & Video streaming web application</title>
+  <meta name="description" content="Music, Musician, King Music" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+ <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+
+  <!-- carousel style and Js -->
+  <link rel="stylesheet" href="carousel/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="carousel/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="media/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="media/mep.css" type="text/css" />
+
+</head>
+
+<body>
+  <div>
+
+<!-- layout starts here-->
+
+  <!-- aside -->
+  <div id="aside" class="app-aside modal fade nav-dropdown">
+    
+    <!-- fluid app aside -->
+    <div class="left navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+      
+
+                 <!-- logo -->
+                  <a href="index.html" class="navbar-brand">
+
+                  	<img src="images/logo-transparent.png" alt="King Music">
+                  	<span class="hidden-folded inline">King Music</span>
+                  </a>
+
+
+
+
+      </div>
+      <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-active-primary">
+
+            <ul class="nav" data-ui-nav>
+              <li class="nav-header">
+
+                <span class="text-xs text-subtitle2">Main Menu</span>
+              </li>
+
+
+              <li>
+                <a href="artist.html">
+                        <span class="nav-icon">
+                          <i class="material-icons">
+                             queue_music
+                          </i>
+                        </span>
+
+                  <span class="nav-text">Artist</span>
+                </a>
+              </li>
+
+
+
+
+
+                    <li>
+                      <a href="livestreaming.html">
+                        <span class="nav-icon">
+                          <i class="material-icons">
+                            live_tv
+                          </i>
+                        </span>
+
+                        <span class="nav-text">LiveStream</span>
+                      </a>
+                    </li>
+
+
+
+              <li>
+                <a href="masterclass.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                      queue_music
+                    </i>
+                  </span>
+                  <span class="nav-text">MasterClass</span>
+                </a>
+              </li>
+
+
+
+
+
+              <li>
+                <a href="shop.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                       add_shopping_cart
+                    </i>
+                  </span>
+                  <span class="nav-text">Shop</span>
+                </a>
+              </li>
+
+
+                       <li>
+                <a href="contact.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                       call
+                    </i>
+                  </span>
+                  <span class="nav-text">Contact Us</span>
+                </a>
+              </li>
+
+
+                             <li>
+                                <a href="donate.html">
+                                  <span class="nav-icon">
+                                    <i class="material-icons">
+                                     attach_money
+                                    </i>
+                                  </span>
+                                  <span class="nav-text">Donate</span>
+                                </a>
+                              </li>
+
+
+
+              <li>
+                <a data-toggle="modal" data-target="#search-modal">
+                  <span class="nav-icon">
+                    <i class="material-icons">
+                      search
+                    </i>
+                  </span>
+                  <span class="nav-text">Search</span>
+                </a>
+              </li>
+
+
+
+
+                                <li class="nav-header hidden-folded m-t">
+                                  <span class="text-xs text-subtitle2">Your Favourite collectionn</span>
+                                </li>
+
+
+                                    <li>
+                                      <a href="#">
+                                        <span class="nav-label">
+                                         
+                                        </span>
+
+                                        <span class="nav-icon">
+                                          <i class="material-icons"> 
+                                            list
+                                          </i>
+
+                                        </span>
+                                        <span class="nav-text">Tracks</span>
+
+                                      </a>
+                                    </li>
+
+
+
+
+                                <li>
+                                  <a href="#">
+                                    <span class="nav-icon">
+                                      <i class="material-icons">
+                                        play_circle_outline
+                                      </i>
+                                    </span>
+
+
+                                    <span class="nav-text">Playlists</span>
+                                  </a>
+                                </li>
+
+
+                                            <li>
+                                              <a href="#">
+
+                                                <span class="nav-icon">
+                                                  <i class="material-icons">
+                                                    favorite_border
+                                                  </i>
+                                                </span>
+
+                                                <span class="nav-text">Likes</span>
+                                              </a>
+                                            </li>
+                              </ul>
+                            </nav>
+                        </div>
+
+
+
+    </div>
+  </div>
+  <!-- /aside ends here -->
+
+
+
+
+  <!-- content -->
+  <div id="content" class="app-content white bg box-shadow-z2" role="main">
+
+    <div class="app-footer app-player grey bg">
+      <div class="playlist" style="width:100%"></div>
+    </div>
+    <div>
+
+<!-- Artist list-->
+
+<div class="page-content">
+  <div class="row-col">
+    <div class="col-lg-9 ">
+      <div class="padding">
+
+
+        <div class="page-title">
+          <h1 class="inline m-a-0">Artists</h1>
+        
+        </div>
+
+
+   <div data-ui-jp="jscroll" data-ui-options="{
+                                                  autoTrigger: false, loadingHtml: '<i class=\'fa fa-refresh fa-spin text-md text-subtitle2\'></i>',padding: 50, nextSelector: 'a.jscroll-next:last'}">
+
+         
+
+          <div class="row row-lg">
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded circle">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a0.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Eminem</a>
+            					<div class="text-small text-subtitle2">13 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a1.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Talor Swift</a>
+            					<div class="text-small text-subtitle2">24 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a2.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">The Queen of Pop</a>
+            					<div class="text-small text-subtitle2">9 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a3.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Adele</a>
+            					<div class="text-small text-subtitle2">23 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a4.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Ariana Grande</a>
+            					<div class="text-small text-subtitle2">12 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a5.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Katy Perry</a>
+            					<div class="text-small text-subtitle2">14 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a6.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Sam Smith</a>
+            					<div class="text-small text-subtitle2">8 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a7.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Jeremy Scott</a>
+            					<div class="text-small text-subtitle2">14 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a8.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Melissa Garza</a>
+            					<div class="text-small text-subtitle2">20 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a9.jpg');"></a>
+            			</div>
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Ed Sheeran</a>
+            					<div class="text-small text-subtitle2">20 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+                <div class="col-xs-4 col-sm-4 col-md-3">
+                	<div class="item">
+            			<div class="item-media rounded ">
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a10.jpg');"></a>
+            			</div>
+
+
+            			<div class="item-info text-center">
+            				<div class="item-title text-title-artist">
+            					<a href="artist.detail.html">Judy Woods</a>
+            					<div class="text-small text-subtitle2">23 songs</div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+
+
+                 <div class="col-xs-4 col-sm-4 col-md-3">
+                  <div class="item">
+                  <div class="item-media rounded ">
+                    <a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a11.jpg');"></a>
+                  </div>
+
+
+                  <div class="item-info text-center">
+                    <div class="item-title text-title-artist">
+                      <a href="artist.detail.html">Judy Woods</a>
+                      <div class="text-small text-subtitle2">23 songs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="col-lg-3 w-xxl w-auto-md">
+      <div class="padding" style="bottom: 60px;" data-ui-jp="stick_in_parent">
+      	<h6 class="text text-subtitle2">Top 5</h6>
+      	<div class="row item-list item-list-sm m-b">
+      		    
+
+
+
+      		     <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite1.jpg');"></a>
+
+                </div>
+
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">Simple Place To Be</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">RYD</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+              <div class="col-xs-12">
+                <div class="item">
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite3.jpg');"></a>
+                </div>
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">Reflection (Deluxe)</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Fifth Harmony</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+              <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite5.jpg');"></a>
+
+                </div>
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">What A Time To Be Alive</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Judith Garcia</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+              <div class="col-xs-12">
+                <div class="item">
+
+                <div class="item-media ">
+
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite10.jpg');"></a>
+                </div>
+
+
+                <div>
+                  <div>
+                    <a href="track.detail.html">All I Need</a>
+                  </div>
+
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Pablo Nouvelle</a>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xs-12">
+                <div class="item">
+                <div class="item-media ">
+                  <a href="track.detail.html" class="item-media-content" style="background-image: url('images/favourite7.jpg');"></a>
+
+                </div>
+                <div>
+                  <div>
+                    <a href="track.detail.html">I Wanna Be In the Cavalry 4</a>
+                  </div>
+                  <div>
+                    <a href="artist.detail.html" class="text-subtitle2">Jeremy Scott</a>
+                  </div>
+
+      					</div>
+      				</div>
+      			</div>
+      	</div>
+
+
+
+
+
+      	<h6 class="text">Download mobile</h6>
+
+
+                    	
+
+        <div class="btn-groups">
+              <a href="" class="btn btn-sm dark text-side" style="width: 135px">
+                <span class="pull-left ">
+                  <i class="fa fa-apple fa-2x"></i>
+                </span>
+
+                <span class="clear text-left ">
+                  <span class="text-subtitle2 ">Download on the</span>
+                  <b class="block m-b-xs">App Store</b>
+                </span>
+
+
+              </a>
+
+              <a href="" class="btn btn-sm dark" style="width: 133px">
+                <span class="pull-left">
+                  <i class="fa fa-play fa-2x"></i>
+                </span>
+
+
+                <span class="clear text-left ">
+                  <span class="text-subtitle2 ">Get it on</span>
+                  <b class="block m-b-xs text-side">Google Play</b>
+                </span>
+              </a>
+          </div>
+
+
+
+         <br>
+          <div class="nav text-small">
+            <a href="index.html" >Home | </a>
+            <a href="contact.html">Contact Us | </a>
+            <a href="#" >Legal | </a>
+            <a href="#" >Policy</a>
+          </div>
+          <p>&copy; Copyright King Music 2021</p>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- pagee end-->
+
+    </div>
+  </div>
+  
+<!-- Layout-->
+
+  </div>
+
+
+<!--Script-->
+
+ <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="carousel/owl.carousel.min.js"></script>
+  <script src="media/mediaelement-and-player.min.js"></script>
+  <script src="media/mep.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/config.lazyload.js"></script>
+  <script src="js/ui-jp.js"></script>
+  <script src="js/ajax.js"></script>
+</body>
+</html>
