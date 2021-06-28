@@ -57,7 +57,7 @@
               <!-- navbar right -->
               <ul class="nav navbar-nav pull-right">
                 <li class="nav-item">
-                  <a class="nav-link">
+                  <a class="nav-link" data-toggle="modal" data-target="#search-modal">
                     <i class="material-icons">search</i>
                   </a>
                 </li>
@@ -319,7 +319,7 @@
             </div>
             <div class="item-info">
 
-              
+
               <div class="item-title text-title-artist">
                 <a href="track.detail.html">What A Time To Be Alive</a>
               </div>
@@ -1188,6 +1188,43 @@
 
 
 <!--  Layout end-->
+
+
+<!-- Search  -->
+            <div class="modal white lt fade" id="search-modal" data-backdrop="false">
+              <a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
+              <div class="row-col">
+                <div class="p-a-lg h-v row-cell v-m">
+                  <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                      <form action="index.html" class="m-b-md">
+                        <div class="input-group input-group-lg">
+                          <input type="text" class="form-control" placeholder="Type keyword" data-ui-toggle-class="hide" data-ui-target="#search-result">
+                          <span class="input-group-btn">
+                            <button class="btn b-a no-shadow white" type="submit">Search</button>
+                          </span>
+                        </div>
+                      </form>
+
+
+
+                                      <div id="top-search" class="btn-groups">
+                                        <strong class="text-muted">Top searches: </strong>
+                                        <a href="#" class="btn btn-xs white">Jazz</a>
+                                        <a href="#" class="btn btn-xs white">Pop</a>
+                                        <a href="#" class="btn btn-xs white">R&B</a>
+                                        <a href="#" class="btn btn-xs white">Gospel</a>
+                                        <a href="#" class="btn btn-xs white">Blues</a>
+                                        <a href="#" class="btn btn-xs white">Reggae</a>
+                                        <a href="#" class="btn btn-xs white">Soul</a>
+                                        <a href="#" class="btn btn-xs white">Calm</a>
+                                      </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Search ends -->
 
 
 <!--Script-->
